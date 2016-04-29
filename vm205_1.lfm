@@ -1,0 +1,634 @@
+object Form1: TForm1
+  Left = 241
+  Height = 655
+  Top = 36
+  Width = 860
+  Caption = 'VM205'
+  ClientHeight = 655
+  ClientWidth = 860
+  Font.Height = -11
+  Font.Name = 'Sans'
+  OnCreate = FormCreate
+  LCLVersion = '0.9.30.4'
+  object Panel1: TPanel
+    Left = 8
+    Height = 259
+    Top = 8
+    Width = 804
+    BevelOuter = bvLowered
+    BevelWidth = 2
+    ClientHeight = 259
+    ClientWidth = 804
+    ParentColor = False
+    TabOrder = 0
+    object Image1: TImage
+      Left = 2
+      Height = 256
+      Top = 2
+      Width = 800
+      OnMouseDown = Image1MouseDown
+      OnMouseMove = Image1MouseMove
+      OnMouseUp = Image1MouseUp
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 146
+    Top = 504
+    Width = 248
+    Caption = 'Volts/Div'
+    ClientHeight = 131
+    ClientWidth = 244
+    TabOrder = 1
+    object Volt5: TSpeedButton
+      Tag = 1
+      Left = 46
+      Height = 28
+      Top = 0
+      Width = 56
+      Caption = '5V'
+      GroupIndex = 1
+      NumGlyphs = 0
+      OnClick = VoltClick
+    end
+    object PositionY: TTrackBar
+      Left = 3
+      Height = 128
+      Top = 0
+      Width = 35
+      Frequency = 16
+      Max = 255
+      OnChange = PositionYChange
+      Orientation = trVertical
+      Position = 128
+      TickMarks = tmTopLeft
+      TabOrder = 0
+    end
+    object Volt2: TSpeedButton
+      Tag = 2
+      Left = 110
+      Height = 28
+      Top = 0
+      Width = 56
+      Caption = '2V'
+      Down = True
+      GroupIndex = 1
+      NumGlyphs = 0
+      OnClick = VoltClick
+    end
+    object Volt1: TSpeedButton
+      Tag = 3
+      Left = 174
+      Height = 28
+      Top = 0
+      Width = 56
+      Caption = '1V'
+      GroupIndex = 1
+      NumGlyphs = 0
+      OnClick = VoltClick
+    end
+    object Volt05: TSpeedButton
+      Tag = 4
+      Left = 46
+      Height = 28
+      Top = 32
+      Width = 56
+      Caption = '0.5V'
+      GroupIndex = 1
+      NumGlyphs = 0
+      OnClick = VoltClick
+    end
+    object Volt02: TSpeedButton
+      Tag = 5
+      Left = 110
+      Height = 28
+      Top = 32
+      Width = 56
+      Caption = '0.2V'
+      GroupIndex = 1
+      NumGlyphs = 0
+      OnClick = VoltClick
+    end
+    object Volt01: TSpeedButton
+      Tag = 6
+      Left = 174
+      Height = 28
+      Top = 32
+      Width = 56
+      Caption = '0.1V'
+      GroupIndex = 1
+      NumGlyphs = 0
+      OnClick = VoltClick
+    end
+    object Label2: TLabel
+      Left = 58
+      Height = 14
+      Top = 80
+      Width = 50
+      Caption = 'Coupling'
+      ParentColor = False
+    end
+    object Label1: TLabel
+      Left = 38
+      Height = 14
+      Top = 106
+      Width = 46
+      Caption = 'Position'
+      ParentColor = False
+    end
+    object CouplingAC: TSpeedButton
+      Tag = 1
+      Left = 110
+      Height = 28
+      Top = 72
+      Width = 56
+      Caption = 'AC'
+      GroupIndex = 2
+      NumGlyphs = 0
+      OnClick = CouplingClick
+    end
+    object CouplingDC: TSpeedButton
+      Tag = 2
+      Left = 174
+      Height = 28
+      Top = 72
+      Width = 56
+      Caption = 'DC'
+      Down = True
+      GroupIndex = 2
+      NumGlyphs = 0
+      OnClick = CouplingClick
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 264
+    Height = 146
+    Top = 504
+    Width = 179
+    Caption = 'Time/Div'
+    ClientHeight = 131
+    ClientWidth = 175
+    TabOrder = 2
+    OnClick = TimeClick
+    object Time200: TSpeedButton
+      Tag = 1
+      Left = 6
+      Height = 24
+      Top = 0
+      Width = 48
+      Caption = '200ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time100: TSpeedButton
+      Tag = 2
+      Left = 62
+      Height = 24
+      Top = 0
+      Width = 48
+      Caption = '100ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time50: TSpeedButton
+      Tag = 3
+      Left = 118
+      Height = 24
+      Top = 0
+      Width = 48
+      Caption = '50ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time20: TSpeedButton
+      Tag = 4
+      Left = 6
+      Height = 24
+      Top = 24
+      Width = 48
+      Caption = '20ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time10: TSpeedButton
+      Tag = 5
+      Left = 62
+      Height = 24
+      Top = 24
+      Width = 48
+      Caption = '10ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time5: TSpeedButton
+      Tag = 6
+      Left = 118
+      Height = 24
+      Top = 24
+      Width = 48
+      Caption = '5ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time2: TSpeedButton
+      Tag = 7
+      Left = 6
+      Height = 24
+      Top = 48
+      Width = 48
+      Caption = '2ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time1: TSpeedButton
+      Tag = 8
+      Left = 62
+      Height = 24
+      Top = 48
+      Width = 48
+      Caption = '1ms'
+      Down = True
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time05: TSpeedButton
+      Tag = 9
+      Left = 118
+      Height = 24
+      Top = 48
+      Width = 48
+      Caption = '0.5ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time02: TSpeedButton
+      Tag = 10
+      Left = 6
+      Height = 24
+      Top = 72
+      Width = 48
+      Caption = '0.2ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time01: TSpeedButton
+      Tag = 11
+      Left = 62
+      Height = 24
+      Top = 72
+      Width = 48
+      Caption = '0.1ms'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time005: TSpeedButton
+      Tag = 12
+      Left = 118
+      Height = 24
+      Top = 72
+      Width = 48
+      Caption = '50us'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time6: TSpeedButton
+      Tag = 13
+      Left = 6
+      Height = 24
+      Top = 96
+      Width = 48
+      Caption = '20us'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time7: TSpeedButton
+      Tag = 14
+      Left = 62
+      Height = 24
+      Top = 96
+      Width = 48
+      Caption = '10us'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+    object Time8: TSpeedButton
+      Tag = 15
+      Left = 118
+      Height = 24
+      Top = 96
+      Width = 48
+      Caption = '5us'
+      GroupIndex = 3
+      NumGlyphs = 0
+      OnClick = TimeClick
+    end
+  end
+  object Run: TSpeedButton
+    Left = 718
+    Height = 24
+    Top = 504
+    Width = 91
+    Caption = 'Run'
+    GroupIndex = 6
+    NumGlyphs = 0
+    OnClick = RunClick
+  end
+  object Stop: TSpeedButton
+    Left = 718
+    Height = 24
+    Top = 536
+    Width = 91
+    Caption = 'Stop'
+    Down = True
+    GroupIndex = 6
+    NumGlyphs = 0
+    OnClick = StopClick
+  end
+  object GroupBox3: TGroupBox
+    Left = 453
+    Height = 146
+    Top = 504
+    Width = 227
+    Caption = 'Trigger'
+    ClientHeight = 131
+    ClientWidth = 223
+    TabOrder = 3
+    object Volt6: TSpeedButton
+      Tag = 1
+      Left = 97
+      Height = 28
+      Top = 0
+      Width = 56
+      Caption = 'On'
+      GroupIndex = 4
+      NumGlyphs = 0
+      OnClick = TriggerClick
+    end
+    object TriggerLevel: TTrackBar
+      Left = 3
+      Height = 128
+      Top = 0
+      Width = 35
+      Frequency = 16
+      Max = 254
+      Min = 1
+      OnChange = TriggerLevelChange
+      Orientation = trVertical
+      Position = 128
+      TickMarks = tmTopLeft
+      TabOrder = 0
+    end
+    object Label3: TLabel
+      Left = 38
+      Height = 14
+      Top = 106
+      Width = 30
+      Caption = 'Level'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 57
+      Height = 14
+      Top = 8
+      Width = 38
+      Caption = 'On/Off'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 57
+      Height = 14
+      Top = 40
+      Width = 29
+      Caption = 'Edge'
+      ParentColor = False
+    end
+    object Volt7: TSpeedButton
+      Tag = 2
+      Left = 161
+      Height = 28
+      Top = 0
+      Width = 56
+      Caption = 'Off'
+      Down = True
+      GroupIndex = 4
+      NumGlyphs = 0
+      OnClick = TriggerClick
+    end
+    object Volt8: TSpeedButton
+      Tag = 3
+      Left = 97
+      Height = 28
+      Top = 32
+      Width = 56
+      Caption = 'Rising'
+      Down = True
+      GroupIndex = 5
+      NumGlyphs = 0
+      OnClick = TriggerClick
+    end
+    object Volt9: TSpeedButton
+      Tag = 4
+      Left = 161
+      Height = 28
+      Top = 32
+      Width = 56
+      Caption = 'Falling'
+      GroupIndex = 5
+      NumGlyphs = 0
+      OnClick = TriggerClick
+    end
+  end
+  object Panel2: TPanel
+    Left = 8
+    Height = 205
+    Top = 272
+    Width = 804
+    BevelOuter = bvLowered
+    BevelWidth = 2
+    ClientHeight = 205
+    ClientWidth = 804
+    ParentColor = False
+    TabOrder = 4
+    object Image2: TImage
+      Left = 2
+      Height = 201
+      Top = 2
+      Width = 800
+      OnMouseDown = Image2MouseDown
+      OnMouseMove = Image2MouseMove
+      OnMouseUp = Image2MouseUp
+    end
+  end
+  object CheckBox1: TCheckBox
+    Tag = 1
+    Left = 817
+    Height = 22
+    Top = 274
+    Width = 31
+    Caption = '1'
+    Checked = True
+    OnChange = LogicAnalyzerChannels1Select
+    State = cbChecked
+    TabOrder = 5
+  end
+  object CheckBox2: TCheckBox
+    Tag = 2
+    Left = 817
+    Height = 22
+    Top = 294
+    Width = 31
+    Caption = '2'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 6
+  end
+  object CheckBox3: TCheckBox
+    Tag = 4
+    Left = 817
+    Height = 22
+    Top = 314
+    Width = 31
+    Caption = '3'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 7
+  end
+  object CheckBox4: TCheckBox
+    Tag = 8
+    Left = 817
+    Height = 22
+    Top = 334
+    Width = 31
+    Caption = '4'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 8
+  end
+  object CheckBox5: TCheckBox
+    Tag = 16
+    Left = 817
+    Height = 22
+    Top = 354
+    Width = 31
+    Caption = '5'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 9
+  end
+  object CheckBox6: TCheckBox
+    Tag = 32
+    Left = 817
+    Height = 22
+    Top = 374
+    Width = 31
+    Caption = '6'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 10
+  end
+  object CheckBox7: TCheckBox
+    Tag = 64
+    Left = 817
+    Height = 22
+    Top = 392
+    Width = 31
+    Caption = '7'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 11
+  end
+  object CheckBox8: TCheckBox
+    Tag = 128
+    Left = 817
+    Height = 22
+    Top = 414
+    Width = 31
+    Caption = '8'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 12
+  end
+  object CheckBox9: TCheckBox
+    Tag = 256
+    Left = 817
+    Height = 22
+    Top = 434
+    Width = 31
+    Caption = '9'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 13
+  end
+  object CheckBox10: TCheckBox
+    Tag = 512
+    Left = 817
+    Height = 22
+    Top = 454
+    Width = 38
+    Caption = '10'
+    OnChange = LogicAnalyzerChannels1Select
+    TabOrder = 14
+  end
+  object Label6: TLabel
+    Left = 8
+    Height = 14
+    Top = 480
+    Width = 32
+    Caption = 'dV = '
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 152
+    Height = 14
+    Top = 480
+    Width = 32
+    Caption = 'T1 = '
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 280
+    Height = 14
+    Top = 480
+    Width = 28
+    Caption = 'T2 ='
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 416
+    Height = 14
+    Top = 480
+    Width = 32
+    Caption = 'dT = '
+    ParentColor = False
+  end
+  object Label10: TLabel
+    Left = 536
+    Height = 14
+    Top = 480
+    Width = 40
+    Caption = '1/dt = '
+    ParentColor = False
+  end
+  object CheckBox11: TCheckBox
+    Left = 715
+    Height = 22
+    Top = 624
+    Width = 98
+    Caption = 'Black Screen'
+    OnChange = CheckBox11Change
+    TabOrder = 15
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = Timer1Timer
+    left = 736
+    top = 408
+  end
+end
