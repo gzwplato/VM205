@@ -12,6 +12,7 @@ Part of the project will include boxing all of this up so that it's in a self-co
 
 
 ## Top level to-do
+* set up the ATX breakout - done
 * re-arrange screen to best fit a 1024x600 touch screen (move most controls over to the right)
 * option to save current settings upon exit (and auto-reload upon next startup)
 * capture current trace and 'freeze it'
